@@ -19,7 +19,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi! My name is Dionysis Arvanitakis (formally my first name is Dionysios) and I am a second year PhD student at the [Theory Group](https://theory.cs.northwestern.edu) of Northwestern University where I am very fortunate to be working with [Konstantin Makarychev](https://konstantin.makarychev.net) and [Aravindan Vijayaraghavan](https://users.cs.northwestern.edu/~aravindv/). Prior to that I studied [Electrical and Computer Engineering](https://www.ece.ntua.gr/en) at NTUA where I was fortunate to work with [Dimitris Fotakis](https://www.softlab.ntua.gr/~fotakis/).
+I am a third year PhD student at the [Theory Group](https://theory.cs.northwestern.edu) of Northwestern University advised by [Konstantin Makarychev](https://konstantin.makarychev.net) and [Aravindan Vijayaraghavan](https://users.cs.northwestern.edu/~aravindv/). Prior to that I studied [Electrical and Computer Engineering](https://www.ece.ntua.gr/en) at NTUA, my undergraduate advisor was [Dimitris Fotakis](https://www.softlab.ntua.gr/~fotakis/).
 
  My research interests lie broadly in Theoretical Computer Science and more specifically in approximation algorithms and theoretical machine learning. Works that use clever mathematical ideas to design algorithms that can be used in practice is what inspires me in this field.
 
