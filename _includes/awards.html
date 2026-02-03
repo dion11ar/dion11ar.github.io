@@ -1,0 +1,13 @@
+<div class="awards">
+  <ul>
+    {% for item in site.awards %}
+      <li>
+        {% if item.title %}
+          {{ item.title }}
+        {% else %}
+          {{ item.content | strip_html | strip }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
