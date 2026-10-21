@@ -830,6 +830,22 @@ footer.sticky-bottom {
           background: var(--global-theme-color);
         }
 
+        .venue-stoc {
+          background: #3f6592;
+        }
+
+        .venue-icml {
+          background: #3f7f78;
+        }
+
+        .venue-neurips {
+          background: #76598c;
+        }
+
+        .venue-arxiv-preprint {
+          background: #b64a45;
+        }
+
         .publication-year {
           color: var(--global-text-color-light);
           border: 1px solid var(--global-divider-color);
@@ -865,6 +881,17 @@ footer.sticky-bottom {
             color: var(--global-hover-text-color);
             background: var(--global-theme-color);
             border-color: var(--global-theme-color);
+          }
+        }
+
+        a.arxiv {
+          color: #b64a45;
+          border-color: #b64a45;
+
+          &:hover {
+            color: #fff;
+            background: #b64a45;
+            border-color: #b64a45;
           }
         }
       }
