@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Joined Northwestern University as a first year PhD student
+Joined Northwestern University as a first-year PhD student!

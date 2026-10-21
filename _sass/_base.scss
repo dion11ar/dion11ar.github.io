@@ -19,6 +19,30 @@ strong {
   color: var(--global-text-color);
 }
 
+// Personal wordmark
+.site-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
+  .font-weight-bold {
+    font-weight: 600 !important;
+  }
+}
+
+.post-title.site-name {
+  margin-bottom: 0.35rem;
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.navbar-brand.site-name {
+  font-size: 1.45rem;
+  font-weight: 500 !important;
+  line-height: 1;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -165,13 +189,19 @@ blockquote {
   width: 100%;
 
   .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    margin-top: 0.65rem;
+    margin-bottom: 0.25rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.35;
 
     p {
-      display: inline-block;
-      margin: 0;
+      display: block;
+      margin: 0 0 0.1rem;
+    }
+
+    .profile-role {
+      font-weight: 600;
     }
   }
 }
@@ -645,12 +675,28 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--global-text-color);
+    border: 0;
+    padding: 0;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--global-divider-color);
+    }
+
+    span {
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
   }
 
   ol.bibliography {
@@ -659,7 +705,28 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.65rem;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+
+      &:hover {
+        border-color: var(--global-theme-color);
+        box-shadow: 0 0.4rem 1.25rem rgba(0, 0, 0, 0.06);
+        transform: translateY(-1px);
+      }
+
+      > .row {
+        margin-right: 0;
+        margin-left: 0;
+
+        > [class*="col-"] {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
 
       .preview {
         width: 100%;
@@ -693,10 +760,26 @@ footer.sticky-bottom {
       }
 
       .title {
-        font-weight: bolder;
+        margin-bottom: 0.35rem;
+        font-size: 1.05rem;
+        font-weight: 650;
+        line-height: 1.35;
+
+        a {
+          color: var(--global-text-color);
+
+          &:hover {
+            color: var(--global-theme-color);
+            text-decoration: none;
+          }
+        }
       }
 
       .author {
+        color: var(--global-text-color-light);
+        font-size: 0.9rem;
+        line-height: 1.45;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -707,7 +790,8 @@ footer.sticky-bottom {
         }
 
         >em {
-          border-bottom: 1px solid;
+          color: var(--global-text-color);
+          font-weight: 600;
           font-style: normal;
         }
 
@@ -723,18 +807,62 @@ footer.sticky-bottom {
         }
       }
 
+      .publication-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.65rem;
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          min-height: 1.55rem;
+          padding: 0.12rem 0.55rem;
+          border-radius: 999px;
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+
+        .venue {
+          color: var(--global-hover-text-color);
+          background: var(--global-theme-color);
+        }
+
+        .publication-year {
+          color: var(--global-text-color-light);
+          border: 1px solid var(--global-divider-color);
+        }
+
+        .publication-note {
+          color: var(--global-theme-color);
+          border: 1px solid var(--global-theme-color);
+
+          b {
+            font-weight: 600;
+          }
+        }
+      }
+
       .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.7rem;
+
         a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          margin-left: 0;
+          color: var(--global-text-color-light);
+          border: 1px solid var(--global-divider-color);
+          border-radius: 999px;
+          padding: 0.18rem 0.7rem;
+          margin: 0;
+          font-size: 0.78rem;
+          font-weight: 500;
 
           &:hover {
-            color: var(--global-theme-color);
+            color: var(--global-hover-text-color);
+            background: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
         }
