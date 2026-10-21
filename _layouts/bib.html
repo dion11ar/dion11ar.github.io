@@ -149,10 +149,9 @@
         {% assign venue_class = entrytype_text | downcase | replace: ' ', '-' %}
         <div class="publication-meta">
           {%- if entrytype_text != blank -%}
-            <span class="venue venue-{{ venue_class }}">{{ entrytype }}</span>
-          {%- endif -%}
-          {%- if entrymonth or entryyear -%}
-            <span class="publication-year">{{ entrymonth }}{{ entryyear }}</span>
+            <span class="venue venue-{{ venue_class }}">
+              {{ entrytype }}{% unless venue_class == 'arxiv-preprint' %}{{ entrymonth }}{{ entryyear }}{% endunless %}
+            </span>
           {%- endif -%}
           {%- if entry.note -%}
             <span class="publication-note">{{ entry.note | strip }}</span>
